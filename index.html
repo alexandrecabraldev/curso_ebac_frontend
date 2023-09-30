@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio HTML Javascript</title>
+    <title>Exercicio Jquery</title>
     
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
+
     <form>
-        <h1>Exercicio Html Javascript</h1>
-        <input type="number" id="number1" placeholder="Number 1">
-        <input type="number" id="number2" placeholder="Number 2">
-        <button type="submit">Submit</button>
+        <h1>Lista de tarefas</h1>
+        <div id="containerInput">
+            <input type="text" id="inputTask" required>
+            <button type="submit">Cadastrar</button>
+        </div>
+
+        <ul>
+        </ul>
     </form>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
