@@ -10,17 +10,42 @@
 <body>
 
     <form>
-        <h1>Lista de tarefas</h1>
+        <h1>Formulário de Cadastro</h1>
         <div id="containerInput">
-            <input type="text" id="inputTask" required>
+
+            <input type="text" id="nomeCompleto" 
+            name="nomeCompleto"
+            placeholder="Nome Completo">
+
+            <input type="email" id="email" 
+            name="email"
+            placeholder="Email">
+
+            <input type="tel" id="phone">
+
+            <input type="text" 
+            name="cpf"
+            id="cpf">
+
+            <input type="text" id="endereco"
+            name="endereco"
+            placeholder="Endereço">
+
+            <input type="text" 
+            name="cep"
+            id="cep">
+
             <button type="submit">Cadastrar</button>
         </div>
 
-        <ul>
-        </ul>
     </form>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="./jquery//jquery.mask.min.js"></script>
+
+    <script src="./jquery/jquery.validate.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>

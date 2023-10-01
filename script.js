@@ -1,15 +1,52 @@
-const form = $('form');
-const ul = $('ul');
-const input = $('input');
 
-form.on('submit',(event)=>{
-    event.preventDefault();
+$(document).ready(function(){
 
-    const inputValue = input.val();
-    ul.append('<li>' + inputValue + '</li>')
-    input.val('');
+    $('#cpf').mask('000.000.000-00',{
+        placeholder:'CPF: 000.000.000-00'
+    });
+    $('#cep').mask('00000-000',{
+        placeholder:'CEP: 00000-000'
+    });
+    $('#phone').mask('(00) 00000-0000',{
+        placeholder:'tel: (00)00000-0000'
+    });
+
 })
 
-ul.on('click','li',function(){
-    $(this).css('text-decoration', 'line-through');
+$('form').validate({
+    rules:{
+        nomeCompleto:{
+            required:true,
+        },
+        email:{
+            required:true
+        },
+        cpf:{
+            required:true,
+        },
+        cep:{
+            required:true,
+        },
+        endereco:{
+            required:true,
+        },
+    },
+    messages:{
+        nomeCompleto:{
+            required: 'Por favor, informe seu nome completo'
+        },
+        email:{
+            required:'Por favor, informe seu email',
+        },
+        cpf:{
+            required: 'Por favor, informe seu CPF'
+        },
+        cep:{
+            required: 'Por favor, informe seu CEP'
+        },
+        endereco:{
+            required: 'Por favor, informe seu endereco'
+        },
+    }
 })
+
