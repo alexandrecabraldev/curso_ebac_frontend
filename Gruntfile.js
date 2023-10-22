@@ -69,7 +69,7 @@ module.exports = function(grunt){
                     collapseWhitespace:true
                 },
                 files:{
-                    'build/index.html': './index.html',
+                    'build/index.html': 'build/index.html',
                 }
             }
         },
@@ -88,7 +88,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-htmlmin'),
     grunt.loadNpmTasks('grunt-contrib-uglify')
 
-    grunt.registerTask('default',['less','htmlmin','uglify','replace'])
+    grunt.registerTask('default',['less','replace','htmlmin','uglify'])
 
 }
 
