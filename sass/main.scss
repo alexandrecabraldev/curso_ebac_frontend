@@ -1,5 +1,4 @@
-@head-color:#01a3a4;
-@bg-color: #eee;
+@use './variables';
 
 * {
     font-family: sans-serif;
@@ -10,11 +9,11 @@
 }
 
 body {
-    background-color: @bg-color;
+    background-color: variables.$bg-color;
 }
 
 header {
-    background-color: @head-color;
+    background-color: variables.$head-color;
     text-align: center;
     height: 30vh;
 

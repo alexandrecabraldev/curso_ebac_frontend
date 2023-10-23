@@ -1,4 +1,4 @@
-const userName ='alexandrecabraldev';
+const userName = 'alexandrecabraldev';
 const githubURL = `https://api.github.com/users/${userName}`;
 
 const imageProfileHTMLItem = document.querySelector('.profile-avatar')
