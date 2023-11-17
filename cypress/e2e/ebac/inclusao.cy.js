@@ -1,9 +1,12 @@
 /// <reference types="cypress" />
 
-describe('Teste de inclusao edição e remoção',()=>{
+describe('Teste de adição de contato',()=>{
     beforeEach(()=>{
         
         cy.visit('https://agenda-contatos-react.vercel.app/')
+    })
+
+    it('deve adicionar contatos a lista',()=>{
 
         cy.get('input[type="text"]').type('Alexandre')
         cy.get('input[type="email"]').type('alexandre@email.com')
@@ -23,21 +26,6 @@ describe('Teste de inclusao edição e remoção',()=>{
         cy.get('ul > li').should('contain','pedro@email.com')
         cy.get('ul > li').should('contain','74102589630')
 
-        cy.contains('li', 'Alexandre').parent().parent().next().contains('button','Editar').click()
-        
-        cy.get('input[type="text"]').clear().type('Fulano Da Silva')
-        
-        cy.get('input[type="email"]').clear().type('fulano@email.com')
-        
-        cy.get('input[type="tel"]').clear().type('01234567899')
-        
-        cy.get('button[class="alterar"]').click()
-    })
-
-
-    it('Deletar um contato',()=>{
-        
-        cy.contains('li', 'Pedro').parent().parent().next().contains('button','Deletar').click()
     })
 
 })
