@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Teste de inclusao edição e remoção',()=>{
+describe('Teste de alteraçao de contato',()=>{
     beforeEach(()=>{
         cy.visit('https://agenda-contatos-react.vercel.app/')
     })
