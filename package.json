@@ -5,6 +5,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "cypress",
     "gulp": "gulp"
   },
   "author": "",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
+    "cypress": "^13.5.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-htmlmin": "^5.0.1",
